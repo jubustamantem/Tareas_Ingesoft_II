@@ -97,7 +97,7 @@ export default {
   methods: {
     async saveVivienda() {
       try {
-        await axios.post("localhost:8080/viviendas", {
+        await axios.post("http://localhost:5000/viviendas", {
           DIRECCION: this.viviendaDireccion,
           CAPACIDAD: this.viviendaCapacidad,
           NIVELES: this.viviendaNiveles,
@@ -114,7 +114,7 @@ export default {
     },
     async getMunicipios() {
       try {
-        const response = await axios.get("localhost:8080/municipios");
+        const response = await axios.get("http://localhost:5000/municipios");
         this.municipios = response.data;
       } catch (err) {
         console.log(err);

@@ -54,7 +54,7 @@ export default {
   methods: {
     async getMunicipios() {
       try {
-        const response = await axios.get("localhost:8080/municipios");
+        const response = await axios.get("http://localhost:5000/municipios");
         this.items = response.data;
       } catch (err) {
         console.log(err);
@@ -63,7 +63,7 @@ export default {
  
     async deleteMunicipio(id) {
       try {
-        await axios.delete(`localhost:8080/municipios/${id}`);
+        await axios.delete(`http://localhost:5000/municipios/${id}`);
         this.getMunicipios();
       } catch (err) {
         console.log(err);

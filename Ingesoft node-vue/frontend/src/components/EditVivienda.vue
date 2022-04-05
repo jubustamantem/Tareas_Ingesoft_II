@@ -80,7 +80,7 @@ export default {
     async getViviendaById() {
       try {
         const response = await axios.get(
-          `http://localhost:8080/viviendas/${this.$route.params.id}`
+          `http://localhost:5000/viviendas/${this.$route.params.id}`
         );
         this.viviendaDireccion = response.data.DIRECCION;
         this.viviendaCapacidad = response.data.CAPACIDAD
@@ -94,7 +94,7 @@ export default {
     async updateVivienda() {
       try {
         await axios.put(
-          `http://localhost:8080/viviendas/${this.$route.params.id}`,
+          `http://localhost:5000/viviendas/${this.$route.params.id}`,
           {
             DIRECCION: this.viviendaDireccion,
             CAPACIDAD: this.viviendaCapacidad,
@@ -113,7 +113,7 @@ export default {
     },
     async getMunicipios() {
       try {
-        const response = await axios.get("http://localhost:8080/municipios");
+        const response = await axios.get("http://localhost:5000/municipios");
         this.municipios = response.data;
       } catch (err) {
         console.log(err);

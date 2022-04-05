@@ -63,7 +63,7 @@ export default {
   methods: {
     async getPersonas() {
       try {
-        const response = await axios.get("http://localhost:8080/personas");
+        const response = await axios.get("http://localhost:5000/personas");
         this.items = response.data;
       } catch (err) {
         console.log(err);
@@ -72,7 +72,7 @@ export default {
  
     async deletePersona(id) {
       try {
-        await axios.delete(`http://localhost:8080/personas/${id}`);
+        await axios.delete(`http://localhost:5000/personas/${id}`);
         this.getPersonas();
       } catch (err) {
         console.log(err);
@@ -81,7 +81,7 @@ export default {
 
     async getViviendas() {
       try {
-        const response = await axios.get("http://localhost:8080/viviendas");
+        const response = await axios.get("http://localhost:5000/viviendas");
         this.viviendas = response.data;
       } catch (err) {
         console.log(err);

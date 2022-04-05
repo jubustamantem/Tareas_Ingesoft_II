@@ -58,7 +58,7 @@ export default {
   methods: {
     async getViviendas() {
       try {
-        const response = await axios.get("http://localhost:8080/viviendas");
+        const response = await axios.get("http://localhost:5000/viviendas");
         this.items = response.data;
       } catch (err) {
         console.log(err);
@@ -67,7 +67,7 @@ export default {
  
     async deleteVivienda(id) {
       try {
-        await axios.delete(`http://localhost:8080/viviendas/${id}`);
+        await axios.delete(`http://localhost:5000/viviendas/${id}`);
         this.getViviendas();
       } catch (err) {
         console.log(err);
@@ -75,7 +75,7 @@ export default {
     },
     async getMunicipios() {
       try {
-        const response = await axios.get(`http://localhost:8080/municipios`);
+        const response = await axios.get(`http://localhost:5000/municipios`);
         this.municipios = response.data;
       } catch (err) {
         console.log(err);
