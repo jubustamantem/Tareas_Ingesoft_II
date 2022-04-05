@@ -6,19 +6,19 @@
         <input
             class="input"
             type="text"
-            placeholder="Persona Name"
+            placeholder="nOMBRE"
             v-model="personaNombre"
         />
       </div>
     </div>
 
     <div class="field">
-      <label class="label">Telefono</label>
+      <label class="label">Teléfono</label>
       <div class="control">
         <input
             class="input"
             type="text"
-            placeholder="Telefono"
+            placeholder="Teléfono"
             v-model="personaTelefono"
         />
       </div>
@@ -50,11 +50,11 @@
 
 
     <div class="field">
-      <label class="label">ID VIV</label>
+      <label class="label">Vivienda</label>
       <div class="control">
         <div class="select">
           <select class="form-control" @change="changeViv($event)">
-            <option value="" selected disabled>Choose</option>
+            <option value="" selected disabled>Seleccione un ID</option>
             <option v-for="vivienda in viviendas" :value="vivienda.ID_VIV" :key="vivienda.ID_VIV">{{ vivienda.ID_VIV }}</option>
           </select>
         </div>
@@ -62,11 +62,11 @@
     </div>
 
     <div class="field">
-      <label class="label">ID PER</label>
+      <label class="label">Cabeza de Familia</label>
       <div class="control">
         <div class="select">
           <select class="form-control" @change="changePer($event)">
-            <option value="" selected disabled>Choose</option>
+            <option value="" selected disabled>Seleccione un ID</option>
             <option v-for="persona in personas" :value="persona.ID" :key="persona.ID">{{ persona.ID }}</option>
           </select>
         </div>
@@ -75,7 +75,7 @@
 
 
     <div class="control">
-      <button class="button is-success" @click="updatePersona">UPDATE</button>
+      <button class="button is-success" @click="updatePersona">Actualizar</button>
     </div>
   </div>
 </template>

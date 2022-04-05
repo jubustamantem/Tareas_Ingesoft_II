@@ -6,7 +6,7 @@
         <input
           class="input"
           type="text"
-          placeholder="Vivienda Name"
+          placeholder="Dirección"
           v-model="viviendaDireccion"
         />
       </div>
@@ -18,7 +18,7 @@
         <input
           class="input"
           type="text"
-          placeholder="Capacidad"
+          placeholder="Capacidad en m²"
           v-model="viviendaCapacidad"
         />
       </div>
@@ -30,18 +30,18 @@
         <input
           class="input"
           type="text"
-          placeholder="Presupuesto"
+          placeholder="Niveles"
           v-model="viviendaNiveles"
         />
       </div>
     </div>
 
     <div class="field">
-      <label class="label">ID MUN</label>
+      <label class="label">Municipio</label>
       <div class="control">
           <div class="select">
         <select class="form-control" @change="changeMun($event)">
-            <option value="" selected disabled>Choose</option>
+            <option value="" selected disabled>Seleccione un ID</option>
             <option v-for="municipio in municipios" :value="municipio.ID_MUN" :key="municipio.ID_MUN">{{ municipio.ID_MUN }}</option>
         </select>
         </div>
@@ -50,7 +50,7 @@
 
 
     <div class="control">
-      <button class="button is-success" @click="updateVivienda">UPDATE</button>
+      <button class="button is-success" @click="updateVivienda">Actualizar</button>
     </div>
   </div>
 </template>

@@ -1,18 +1,18 @@
 <template>
   <div>
     <router-link :to="{ name: 'CreatePersona' }" class="button is-success mt-5"
-      >Add New</router-link
+      >Agregar</router-link
     >
     <table class="table is-striped is-bordered mt-2 is-fullwidth">
       <thead>
         <tr>
-          <th>Persona Name</th>
-          <th>Telefono</th>
+          <th>Persona - Nombre</th>
+          <th>Teléfono</th>
           <th>Edad</th>
           <th>Sexo</th>
-          <th>Vivienda</th>
-          <th>Persona</th>
-          <th class="has-text-centered">Actions</th>
+          <th>ID Vivienda</th>
+          <th>ID C. de Familia</th>
+          <th class="has-text-centered">Acciones</th>
         </tr>
       </thead>
       <tbody>
@@ -27,12 +27,12 @@
             <router-link
               :to="{ name: 'EditPersona', params: { id: item.ID } }"
               class="button is-info is-small"
-              >Edit</router-link
+              >Editar</router-link
             >
             <a
               class="button is-danger is-small"
               @click="deletePersona(item.ID)"
-              >Delete</a
+              >Eliminar</a
             >
           </td>
         </tr>

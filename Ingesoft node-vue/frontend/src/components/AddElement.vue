@@ -6,19 +6,19 @@
         <input
           class="input"
           type="text"
-          placeholder="Municipio Name"
+          placeholder="Nombre del municipio"
           v-model="municipioName"
         />
       </div>
     </div>
  
     <div class="field">
-      <label class="label">Area</label>
+      <label class="label">Área</label>
       <div class="control">
         <input
           class="input"
           type="text"
-          placeholder="Area"
+          placeholder="Área en km²"
           v-model="municipioArea"
         />
       </div>
@@ -30,14 +30,14 @@
         <input
           class="input"
           type="text"
-          placeholder="Presupuesto"
+          placeholder="Presupuesto en billones $COP"
           v-model="municipioPresupuesto"
         />
       </div>
     </div>
  
     <div class="control">
-      <button class="button is-success" @click="saveMunicipio">SAVE</button>
+      <button class="button is-success" @click="saveMunicipio">Guardar</button>
     </div>
   </div>
 </template>

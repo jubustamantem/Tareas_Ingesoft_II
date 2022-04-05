@@ -1,16 +1,16 @@
 <template>
   <div>
     <router-link :to="{ name: 'CreateVivienda' }" class="button is-success mt-5"
-      >Add New</router-link
+      >Agregar</router-link
     >
     <table class="table is-striped is-bordered mt-2 is-fullwidth">
       <thead>
         <tr>
-          <th>Vivienda - Direccion</th>
-          <th>Capacidad</th>
+          <th>Vivienda - Dirección</th>
+          <th>Capacidad (m²)</th>
           <th>Niveles</th>
-          <th>Municipio</th>
-          <th class="has-text-centered">Actions</th>
+          <th>ID Municipio</th>
+          <th class="has-text-centered">Acciones</th>
         </tr>
       </thead>
       <tbody>
@@ -23,12 +23,12 @@
             <router-link
               :to="{ name: 'EditVivienda', params: { id: item.ID_VIV } }"
               class="button is-info is-small"
-              >Edit</router-link
+              >Editar</router-link
             >
             <a
               class="button is-danger is-small"
               @click="deleteVivienda(item.ID_VIV)"
-              >Delete</a
+              >Eliminar</a
             >
           </td>
         </tr>

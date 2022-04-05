@@ -1,15 +1,15 @@
 <template>
   <div>
     <router-link :to="{ name: 'Create' }" class="button is-success mt-5"
-      >Add New</router-link
+      >Agregar</router-link
     >
     <table class="table is-striped is-bordered mt-2 is-fullwidth">
       <thead>
         <tr>
-          <th>Municipio Name</th>
-          <th>Area</th>
-          <th>Presupuesto</th>
-          <th class="has-text-centered">Actions</th>
+          <th>Municipio - Nombre</th>
+          <th>Área (km²)</th>
+          <th>Presupuesto (billones $COP)</th>
+          <th class="has-text-centered">Acciones</th>
         </tr>
       </thead>
       <tbody>
@@ -21,12 +21,12 @@
             <router-link
               :to="{ name: 'Edit', params: { id: item.ID_MUN } }"
               class="button is-info is-small"
-              >Edit</router-link
+              >Editar</router-link
             >
             <a
               class="button is-danger is-small"
               @click="deleteMunicipio(item.ID_MUN)"
-              >Delete</a
+              >Eliminar</a
             >
           </td>
         </tr>
