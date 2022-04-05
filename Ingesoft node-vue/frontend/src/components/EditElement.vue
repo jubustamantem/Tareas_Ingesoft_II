@@ -61,7 +61,7 @@ export default {
     async getMunicipioById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/municipios/${this.$route.params.id}`
+          `localhost:8080/municipios/${this.$route.params.id}`
         );
         this.municipioName = response.data.NOMBRE_MUN;
         this.municipioArea = response.data.AREA;
@@ -74,7 +74,7 @@ export default {
     async updateMunicipio() {
       try {
         await axios.put(
-          `http://localhost:5000/municipios/${this.$route.params.id}`,
+          `localhost:8080/municipios/${this.$route.params.id}`,
           {
             NOMBRE_MUN: this.municipioName,
             AREA: this.municipioArea,

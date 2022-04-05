@@ -124,7 +124,7 @@ export default {
   methods: {
     async savePersona() {
       try {
-        await axios.post("http://localhost:5000/personas", {
+        await axios.post("localhost:8080/personas", {
           NOMBRE: this.personaNombre,
           TELEFONO: this.personaTelefono,
           EDAD: this.personaEdad,
@@ -146,7 +146,7 @@ export default {
     },
     async getViviendas() {
       try {
-        const response = await axios.get("http://localhost:5000/viviendas");
+        const response = await axios.get("http://localhost:8080/viviendas");
         this.viviendas = response.data;
       } catch (err) {
         console.log(err);
@@ -157,7 +157,7 @@ export default {
     },
     async getPersonas() {
       try {
-        const response = await axios.get("http://localhost:5000/personas");
+        const response = await axios.get("http://localhost:8080/personas");
         this.personas = response.data;
       } catch (err) {
         console.log(err);

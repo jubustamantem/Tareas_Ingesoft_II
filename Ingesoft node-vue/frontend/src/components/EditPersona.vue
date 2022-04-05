@@ -111,7 +111,7 @@ export default {
     async getPersonaById() {
       try {
         const response = await axios.get(
-            `http://localhost:5000/personas/${this.$route.params.id}`
+            `localhost:8080/personas/${this.$route.params.id}`
         );
         this.personaNombre = response.data.NOMBRE;
         this.personaTelefono = response.data.TELEFONO;
@@ -127,7 +127,7 @@ export default {
     async updatePersona() {
       try {
         await axios.put(
-            `http://localhost:5000/personas/${this.$route.params.id}`,
+            `http://localhost:8080/personas/${this.$route.params.id}`,
             {
               NOMBRE: this.personaNombre,
               TELEFONO: this.personaTelefono,
@@ -150,7 +150,7 @@ export default {
     },
     async getViviendas() {
       try {
-        const response = await axios.get("http://localhost:5000/viviendas");
+        const response = await axios.get("http://localhost:8080/viviendas");
         this.viviendas = response.data;
       } catch (err) {
         console.log(err);
@@ -161,7 +161,7 @@ export default {
     },
     async getPersonas() {
       try {
-        const response = await axios.get("http://localhost:5000/personas");
+        const response = await axios.get("http://localhost:8080/personas");
         this.personas = response.data;
       } catch (err) {
         console.log(err);

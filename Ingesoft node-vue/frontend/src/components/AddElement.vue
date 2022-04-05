@@ -58,7 +58,7 @@ export default {
   methods: {
     async saveMunicipio() {
       try {
-        await axios.post("http://localhost:5000/municipios", {
+        await axios.post("localhost:8080/municipios", {
           NOMBRE_MUN: this.municipioName,
           AREA: this.municipioArea,
           PRESUPUESTO: this.municipioPresupuesto,

@@ -1,6 +1,7 @@
 import express from "express";
 import { showMunicipios, showMunicipioById, createMunicipio, updateMunicipio, deleteMunicipio } from "../controllers/municipio.js";
 import { createVivienda, deleteVivienda, showViviendaById, showViviendas, updateVivienda } from "../controllers/vivienda.js";
+import { createPersona, deletePersona, showPersonaById, showPersonas, updatePersona } from "../controllers/persona.js";
 
 const router = express.Router();
 
@@ -17,5 +18,11 @@ router.post('/viviendas', createVivienda);
 router.put('/viviendas/:id', updateVivienda);
 router.delete('/viviendas/:id', deleteVivienda)
 
+
+router.get('/personas', showPersonas);
+router.get('/personas/:id', showPersonaById);
+router.post('/personas', createPersona);
+router.put('/personas/:id', updatePersona);
+router.delete('/personas/:id', deletePersona)
 
 export default router;
