@@ -1,24 +1,4 @@
 <template>
-
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/municipios/">
-          Municipios
-        </a>
-
-        <a class="navbar-item" href="/viviendas/">
-          Viviendas
-        </a>
-
-        <a class="navbar-item" href="/personas/">
-          Personas
-        </a>
-
-      </div>
-    </div>
-  </nav>
   <div>
     <div class="field">
       <label class="label">Persona</label>

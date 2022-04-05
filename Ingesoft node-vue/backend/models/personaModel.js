@@ -38,7 +38,7 @@ export const insertPersona = (data, result) => {
 }
 
 export const updatePersonaById = (data, id, result) => {
-    db.query("UPDATE persona SET NOMBRE = ?, TELEFONO = ?, EDAD = ?, SEXO = ?, VIVIENDA_ID_VIV = ?, PERSONA_ID WHERE ID = ?", [data.NOMBRE, data.TELEFONO, data.EDAD, data.SEXO, data.VIVIENDA_ID_VIV, data.PERSONA_ID, id], (err, results) => {             
+    db.query("UPDATE persona SET NOMBRE = ?, TELEFONO = ?, EDAD = ?, SEXO = ?, VIVIENDA_ID_VIV = ?, PERSONA_ID = ? WHERE ID = ?", [data.NOMBRE, data.TELEFONO, data.EDAD, data.SEXO, data.VIVIENDA_ID_VIV, data.PERSONA_ID, id], (err, results) => {
         if(err) {
             console.log(err);
             result(err, null);
