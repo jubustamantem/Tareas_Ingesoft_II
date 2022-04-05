@@ -6,7 +6,7 @@
         <input
           class="input"
           type="text"
-          placeholder="Municipio Name"
+          placeholder="Vivienda Name"
           v-model="viviendaDireccion"
         />
       </div>

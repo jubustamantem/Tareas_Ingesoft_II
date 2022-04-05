@@ -12,6 +12,10 @@
         Viviendas
       </a>
 
+      <a class="navbar-item" href="/personas/">
+        Personas
+      </a>
+
     </div>
   </div>
 </nav>
